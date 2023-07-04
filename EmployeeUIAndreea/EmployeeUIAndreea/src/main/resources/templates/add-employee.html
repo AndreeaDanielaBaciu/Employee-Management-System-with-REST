@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Employee</title>
+    <link rel="stylesheet" th:href="add-employee-styles.css">
+
+</head>
+<body>
+	<h2>Add a new employee</h2>
+	
+	<div th:each="error : ${errorMessages}">
+		<p th:text="${error}" style="color:red; font-weight:bold;"></p>
+	</div>
+	
+	<hr>
+	<form method="POST" th:object="${employee}" th:action="@{addEmployeeSubmit}">
+		<div>
+			<label>First Name: </label>
+			<input type="text" th:field="*{firstName}" required>
+		</div>
+		<div>
+			<label>Last Name: </label>
+			<input type="text" th:field="*{lastName}" required>
+		</div>
+		<div>
+			<label>Salary: </label> 
+			<input type="number" th:field="*{salary}" required>
+		</div>
+		<div>
+			<label>Province: </label>
+			<input type="text" th:field="*{province}" required>
+		</div>
+		<div>
+			<label>Country: </label>
+			<input type="text" th:field="*{country}" required>
+		</div>
+		<div>
+			<input type="submit" value="add employee">
+		</div>
+	</form>
+	<hr>
+</body>
+</html>

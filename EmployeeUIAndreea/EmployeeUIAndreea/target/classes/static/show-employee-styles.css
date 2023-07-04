@@ -1,0 +1,53 @@
+/* CSS styles for the show-employee page */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.employee-details {
+    margin: 20px;
+}
+
+.employee-details table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.employee-details th,
+.employee-details td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.button-group {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.go-back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}

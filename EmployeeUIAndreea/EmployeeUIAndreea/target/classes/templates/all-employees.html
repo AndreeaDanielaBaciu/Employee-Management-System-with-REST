@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All Employees</title>
+    <link rel="stylesheet" href="all-employees-styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Employee Management System</h1>
+    </header>
+
+
+    <div class="header">
+        <h2>All Employees</h2>
+    </div>
+    
+    <div class="button-group">
+        <a th:href="@{allEmployees}" class="refresh-button">Refresh</a>
+        <a th:href="@{addEmployee}" class="add-button">Add Employee</a>
+        <a href="/" class="go-back-home-page">Back to Home Page</a>
+    </div>
+    
+    <div class="search-bar">
+        <form action="/search-employees" method="GET">
+            <input type="text" name="searchInput" placeholder="Search by last name or first name">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div class="search-bar-id">
+        <form action="/searchEmployee" method="GET">
+	        <input type="text" name="id" placeholder="Enter employee ID">
+	        <button type="submit">Search</button>
+        </form>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <!-- <th>Salary</th>
+                <th>Province</th>
+                <th>Country</th> -->
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="employee : ${listOfEmployees}">
+                <td th:text="${employee.firstName}"></td>
+                <td th:text="${employee.lastName}"></td>
+                <!-- <td th:text="${employee.salary}"></td>
+                <td th:text="${employee.province}"></td>
+                <td th:text="${employee.country}"></td> -->
+                <td class="options">
+                    <a th:href="@{editEmployee(id=${employee.id})}" class="edit">
+                        <span class="edit-icon">edit</span>
+                    </a> |
+                    <a th:href="@{deleteEmployee(id=${employee.id})}" class="delete">
+                        <span class="delete-icon">delete</span>
+                    </a> |
+                    <a th:href="@{showEmployee(id=${employee.id})}" class="show">
+                        <span class="show-icon">show</span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <footer class="footer">&copy; 2023 Company</footer>
+</body>
+</html>

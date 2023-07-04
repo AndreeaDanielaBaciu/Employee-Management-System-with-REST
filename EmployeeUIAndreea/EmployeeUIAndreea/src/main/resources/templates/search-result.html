@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <link rel="stylesheet" th:href="@{/search-result-styles.css}">
+</head>
+<body>
+    <h2>Search Results</h2>
+    
+    <div th:if="${employee != null}" class="employee-details">
+        <h3>Employee Details:</h3>
+        <ul>
+            <li>ID: <span th:text="${employee.id}"></span></li>
+            <li>First Name: <span th:text="${employee.firstName}"></span></li>
+            <li>Last Name: <span th:text="${employee.lastName}"></span></li>
+            <li>Salary: <span th:text="${employee.salary}"></span></li>
+            <li>Province: <span th:text="${employee.province}"></span></li>
+            <li>Country: <span th:text="${employee.country}"></span></li>
+        </ul>
+    </div>
+    
+    <div th:unless="${employee != null}" class="no-employee">
+        <p>No employee found with the specified ID.</p>
+    </div>
+
+    <div class="button-container">
+        <a href="/" class="green-button">Back to Home Page</a>
+        <a href="/allEmployees" class="green-button">All Employees</a>
+    </div>
+</body>
+</html>

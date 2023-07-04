@@ -1,0 +1,147 @@
+/* all-employees-styles.css */
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* Button styles */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.refresh-button,
+.add-button,
+.go-back-home-page,
+.search-bar button,
+.search-bar-id button {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.refresh-button,
+.add-button,
+.go-back-home-page {
+    background-color: #4CAF50;
+}
+
+.refresh-button:hover,
+.add-button:hover,
+.search-bar button:hover {
+    background-color: #45a049;
+}
+
+/* Search bar styles */
+.search-bar,
+.search-bar-id {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+   
+}
+
+.search-bar input[type="text"],
+.search-bar button,
+.search-bar-id input[type="text"],
+.search-bar-id button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button,
+.search-bar-id button {
+	 background-color: #4CAF50;
+}
+
+
+/* Modify the size of the first search button */
+/* .search-bar button:first-child {
+    padding: 10px 15px;
+} */
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Table row hover styles */
+tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Options links styles */
+.options a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 5px;
+    padding: 2px 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+}
+
+.options a:hover {
+    background-color: #ddd;
+}
+
+.options a.edit:hover {
+    background-color: #ffffcc;
+    color: black;
+}
+
+.options a.delete:hover {
+    background-color: #ff4444;
+    color: black;
+}
+
+/* Footer styles */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #ddd;
+}

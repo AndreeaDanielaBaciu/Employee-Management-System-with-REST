@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Error Page</title>
+    <link rel="stylesheet" href="not-found-error-styles.css">
+</head>
+<body>
+    <div class="error-container">
+        <h1>Error <span th:text="${errorCode}"></span></h1>
+        <h3 th:text="${errorMessage}"></h3>
+        <a href="/" class="green-button">Back to Home Page</a>
+        <a th:href="@{allEmployees}">View All Employees</a>
+    </div>
+    <hr>
+</body>
+</html>

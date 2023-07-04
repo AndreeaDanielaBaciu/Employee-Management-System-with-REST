@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Employee</title>
+    <link rel="stylesheet" href="show-employee-styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Employee Management System</h1>
+    </header>
+
+    <div class="header">
+        <h2>Employee Details</h2>
+    </div>
+
+    <div class="employee-details">
+        <table>
+            <tr>
+                <th>ID:</th>
+                <td th:text="${employee.id}"></td>
+            </tr>
+            <tr>
+                <th>First Name:</th>
+                <td th:text="${employee.firstName}"></td>
+            </tr>
+            <tr>
+                <th>Last Name:</th>
+                <td th:text="${employee.lastName}"></td>
+            </tr>
+            <tr>
+                <th>Salary:</th>
+                <td th:text="${employee.salary}"></td>
+            </tr>
+            <tr>
+                <th>Province:</th>
+                <td th:text="${employee.province}"></td>
+            </tr>
+            <tr>
+                <th>Country:</th>
+                <td th:text="${employee.country}"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="button-group">
+        <a th:href="@{allEmployees}" class="go-back-button">Go Back</a>
+    </div>
+
+    <hr>
+
+    <footer class="footer">&copy; 2023 Company</footer>
+</body>
+</html>
