@@ -1,0 +1,5 @@
+insert into Employee(id, firstName, lastName, salary, province, country) values (nextval('EMPLOYEE_ID_SEQ'), 'Ioana', 'Popescu', 50.000, 'Bedfordshire', 'England' );
+insert into Employee(id, firstName, lastName, salary, province, country) values (nextval('EMPLOYEE_ID_SEQ'), 'Daniela', 'Anastasei', 250.000, 'Oxfordshire', 'England' );
+insert into Employee(id, firstName, lastName, salary, province, country) values (nextval('EMPLOYEE_ID_SEQ'), 'Damian', 'Dascalu', 75.000, 'Bedfordshire', 'England' );
+insert into Employee(id, firstName, lastName, salary, province, country) values (nextval('EMPLOYEE_ID_SEQ'), 'Diana', 'Popovic', 76.000, 'Anothershre', 'England' );
+insert into Employee(id, firstName, lastName, salary, province, country) values (nextval('EMPLOYEE_ID_SEQ'), 'Samwise', 'Gamgee', 85.000, 'Theshire', 'Middle-earth' );
